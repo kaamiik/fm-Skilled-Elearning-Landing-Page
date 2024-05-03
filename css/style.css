@@ -234,7 +234,8 @@ header > .btn {
 .main-heading {
   max-width: 25rem;
   margin-top: 2.375rem;
-  padding: 0 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .main-heading > * + * {
   margin-top: 1.5rem;
@@ -243,7 +244,7 @@ header > .btn {
   .main-heading {
     margin-top: 6.25rem;
     margin-left: 2.5rem;
-    padding: 0;
+    margin-right: revert;
   }
 }
 @media (min-width: 75rem) {
@@ -259,12 +260,13 @@ header > .btn {
 
 .main-img {
   margin-top: 2.875rem;
-  padding: 0 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 @media (min-width: 48rem) {
   .main-img {
+    z-index: -1;
     margin: 0;
-    padding: 0;
     position: absolute;
     top: -3.75rem;
     right: -18.125rem;
@@ -323,6 +325,16 @@ header > .btn {
   border-radius: 0.625rem;
   box-shadow: 0 25px 50px 0 rgba(6, 22, 141, 0.0442);
 }
+@media (min-width: 48rem) {
+  .course {
+    padding: 0 2rem 2rem;
+  }
+}
+@media (min-width: 75rem) {
+  .course {
+    padding: 0 2rem 2.5rem;
+  }
+}
 .course img {
   transform: translateY(-50%);
   align-self: flex-start;
@@ -337,16 +349,6 @@ header > .btn {
 }
 .course .course-link {
   margin-top: 1.5rem;
-}
-@media (min-width: 48rem) {
-  .course {
-    padding: 0 2rem 2rem;
-  }
-}
-@media (min-width: 75rem) {
-  .course {
-    padding: 0 2rem 2.5rem;
-  }
 }
 
 footer {

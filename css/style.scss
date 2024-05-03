@@ -25,13 +25,15 @@ header {
 .main-heading {
   max-width: rem(400);
   margin-top: rem(38);
-  padding: 0 rem(16);
+  margin-left: rem(16);
+  margin-right: rem(16);
+  // padding: 0 rem(16);
   @include flow-content(rem(24));
 
   @include breakpoint(medium) {
     margin-top: rem(100);
     margin-left: rem(40);
-    padding: 0;
+    margin-right: revert;
   }
 
   @include breakpoint(large) {
@@ -44,11 +46,12 @@ header {
 
 .main-img {
   margin-top: rem(46);
-  padding: 0 rem(24);
+  margin-left: rem(16);
+  margin-right: rem(16);
 
   @include breakpoint(medium) {
+    z-index: -1;
     margin: 0;
-    padding: 0;
     position: absolute;
     top: rem(-60);
     right: rem(-290);
@@ -102,6 +105,14 @@ header {
   border-radius: rem(10);
   box-shadow: 0 25px 50px 0 rgba(6, 22, 141, 4.42%);
 
+  @include breakpoint(medium) {
+    padding: 0 rem(32) rem(32);
+  }
+
+  @include breakpoint(large) {
+    padding: 0 rem(32) rem(40);
+  }
+
   img {
     transform: translateY(-50%);
     align-self: flex-start;
@@ -116,14 +127,6 @@ header {
 
   .course-link {
     margin-top: rem(24);
-  }
-
-  @include breakpoint(medium) {
-    padding: 0 rem(32) rem(32);
-  }
-
-  @include breakpoint(large) {
-    padding: 0 rem(32) rem(40);
   }
 }
 
