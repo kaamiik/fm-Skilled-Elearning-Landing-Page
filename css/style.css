@@ -1,0 +1,369 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+p {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #83869a;
+  overflow-x: hidden;
+}
+@media (min-width: 75rem) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.25;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.bg-dark {
+  color: #ffffff;
+  background: #13183f;
+}
+
+.bg-accent {
+  color: #ffffff;
+  background: linear-gradient(to bottom, #ff6f48, #f02aa6);
+}
+
+.bg-light-gradient {
+  color: #83869a;
+  background: linear-gradient(to bottom, #ffffff, #f0f1ff);
+}
+
+.bg-light {
+  color: #83869a;
+  background: #ffffff;
+}
+
+.main-heading > h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #13183f;
+}
+@media (min-width: 75rem) {
+  .main-heading > h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.courses .h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+@media (min-width: 75rem) {
+  .courses .h2 {
+    font-size: 2rem;
+  }
+}
+
+.courses h2 {
+  color: #13183f;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+@media (min-width: 75rem) {
+  .courses h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.course-link {
+  display: inline-block;
+  color: #f74780;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.course-link:hover, .course-link:focus {
+  color: #ffa7c3;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+  padding: 0.5625rem 1.5rem 0.6875rem;
+  border-radius: 1.75rem;
+}
+@media (min-width: 75rem) {
+  .btn {
+    padding: 0.875rem 2rem;
+  }
+}
+
+.btn-header {
+  background: #13183f;
+}
+.btn-header:focus, .btn-header:hover {
+  background: #666ca3;
+}
+
+.btn-main {
+  background: linear-gradient(to bottom, #ff6f48, #f02aa6);
+  padding: 0.9375rem 2.375rem;
+  border-radius: 2rem;
+}
+@media (min-width: 75rem) {
+  .btn-main {
+    padding: 1.1875rem 2rem 1rem;
+  }
+}
+.btn-main:focus, .btn-main:hover {
+  opacity: 0.5;
+}
+
+.btn-footer {
+  background: linear-gradient(to bottom, #4851ff, #f02aa6);
+}
+.btn-footer:focus, .btn-footer:hover {
+  opacity: 0.5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+header > .btn {
+  margin-left: auto;
+}
+@media (min-width: 48rem) {
+  header {
+    padding: 1.5rem 2.5rem;
+  }
+}
+@media (min-width: 75rem) {
+  header {
+    padding: 1.5rem 10.3125rem;
+  }
+}
+
+.main-heading {
+  max-width: 25rem;
+  margin-top: 2.375rem;
+  padding: 0 1rem;
+}
+.main-heading > * + * {
+  margin-top: 1.5rem;
+}
+@media (min-width: 48rem) {
+  .main-heading {
+    margin-top: 6.25rem;
+    margin-left: 2.5rem;
+    padding: 0;
+  }
+}
+@media (min-width: 75rem) {
+  .main-heading {
+    max-width: 28.75rem;
+    margin-top: 10.75rem;
+    margin-left: 10.3125rem;
+  }
+  .main-heading > * + * {
+    margin-top: 1.875rem;
+  }
+}
+
+.main-img {
+  margin-top: 2.875rem;
+  padding: 0 1.5rem;
+}
+@media (min-width: 48rem) {
+  .main-img {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -3.75rem;
+    right: -18.125rem;
+  }
+}
+@media (min-width: 75rem) {
+  .main-img {
+    top: -6.25rem;
+  }
+}
+
+.courses {
+  display: grid;
+  gap: 2.5rem;
+  padding: 0 1rem 5rem;
+}
+@media (min-width: 48rem) {
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2.5rem 0.625rem;
+    padding: 0 2.5rem 5.375rem;
+    margin-top: 11.625rem;
+  }
+}
+@media (min-width: 75rem) {
+  .courses {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5rem 1.875rem;
+    padding: 0 10.3125rem 8.75rem;
+    margin-top: 14.125rem;
+  }
+}
+
+.courses > *:first-of-type {
+  padding: 1.5rem 2rem;
+  border-radius: 0.625rem;
+}
+@media (min-width: 48rem) {
+  .courses > *:first-of-type {
+    padding: 3.5rem 2rem;
+  }
+}
+@media (min-width: 75rem) {
+  .courses > *:first-of-type {
+    padding: 4rem 2rem;
+  }
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 1.75rem 2rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 25px 50px 0 rgba(6, 22, 141, 0.0442);
+}
+.course img {
+  transform: translateY(-50%);
+  align-self: flex-start;
+}
+.course p {
+  margin-top: 1rem;
+}
+@media (min-width: 75rem) {
+  .course p {
+    margin-top: 1.5rem;
+  }
+}
+.course .course-link {
+  margin-top: 1.5rem;
+}
+@media (min-width: 48rem) {
+  .course {
+    padding: 0 2rem 2rem;
+  }
+}
+@media (min-width: 75rem) {
+  .course {
+    padding: 0 2rem 2.5rem;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.25rem 1rem;
+}
+@media (min-width: 48rem) {
+  footer {
+    padding: 2.25rem 2.5rem;
+  }
+}
+@media (min-width: 75rem) {
+  footer {
+    padding: 2rem 10.3125rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

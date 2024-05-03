@@ -1,0 +1,143 @@
+@use "variables" as *;
+@use "breakpoints" as *;
+@use "functions" as *;
+@use "reset";
+@use "typography";
+
+header {
+  display: flex;
+  align-items: center;
+  padding: rem(16);
+
+  > .btn {
+    margin-left: auto;
+  }
+
+  @include breakpoint(medium) {
+    padding: rem(24) rem(40);
+  }
+
+  @include breakpoint(large) {
+    padding: rem(24) rem(165);
+  }
+}
+
+.main-heading {
+  max-width: rem(400);
+  margin-top: rem(38);
+  padding: 0 rem(16);
+  @include flow-content(rem(24));
+
+  @include breakpoint(medium) {
+    margin-top: rem(100);
+    margin-left: rem(40);
+    padding: 0;
+  }
+
+  @include breakpoint(large) {
+    max-width: rem(460);
+    margin-top: rem(172);
+    margin-left: rem(165);
+    @include flow-content(rem(30));
+  }
+}
+
+.main-img {
+  margin-top: rem(46);
+  padding: 0 rem(24);
+
+  @include breakpoint(medium) {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: rem(-60);
+    right: rem(-290);
+  }
+
+  @include breakpoint(large) {
+    top: rem(-100);
+  }
+}
+
+.courses {
+  display: grid;
+  gap: rem(40);
+  padding: 0 rem(16) rem(80);
+
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: rem(40) rem(10);
+    padding: 0 rem(40) rem(86);
+    margin-top: rem(186);
+  }
+
+  @include breakpoint(large) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: rem(80) rem(30);
+    padding: 0 rem(165) rem(140);
+    margin-top: rem(226);
+  }
+}
+
+.courses > *:first-of-type {
+  padding: rem(24) rem(32);
+  border-radius: rem(10);
+
+  @include breakpoint(medium) {
+    padding: rem(56) rem(32);
+  }
+
+  @include breakpoint(large) {
+    padding: rem(64) rem(32);
+  }
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 rem(28) rem(32);
+  border-radius: rem(10);
+  box-shadow: 0 25px 50px 0 rgba(6, 22, 141, 4.42%);
+
+  img {
+    transform: translateY(-50%);
+    align-self: flex-start;
+  }
+
+  p {
+    margin-top: rem(16);
+    @include breakpoint(large) {
+      margin-top: rem(24);
+    }
+  }
+
+  .course-link {
+    margin-top: rem(24);
+  }
+
+  @include breakpoint(medium) {
+    padding: 0 rem(32) rem(32);
+  }
+
+  @include breakpoint(large) {
+    padding: 0 rem(32) rem(40);
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(36) rem(16);
+
+  @include breakpoint(medium) {
+    padding: rem(36) rem(40);
+  }
+
+  @include breakpoint(large) {
+    padding: rem(32) rem(165);
+  }
+}

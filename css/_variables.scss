@@ -1,0 +1,18 @@
+@use "functions" as *;
+@use "breakpoints" as *;
+
+// Colors
+$purple: #666ca3;
+$deep-blue: #13183f;
+$gray: #83869a;
+$bright-pink: #f74780;
+$light-pink: #ffa7c3;
+$white: #ffffff;
+$vivid-pink: #f02aa6;
+
+$orange-pink-gradient: linear-gradient(to bottom, #ff6f48, #f02aa6);
+$blue-pink-gradient: linear-gradient(to bottom, #4851ff, #f02aa6);
+$white-light-gray-gradient: linear-gradient(to bottom, #ffffff, #f0f1ff);
+
+// Fonts
+$ff-jakarta: "Plus Jakarta Sans", sans-serif;
